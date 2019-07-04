@@ -11,15 +11,13 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var emailTF: UITextField!
-    @IBOutlet weak var clockButton: UIButton!
     @IBOutlet weak var label: UILabel!
     var userDef = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let email = userDef.string(forKey: "email")
-        label.text = email
+        
+        label.text = userDef.string(forKey: "email")
         
     }
 
